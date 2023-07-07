@@ -1,12 +1,10 @@
-git remote add origin https://github.com/VincentS972/CodeBook-BackEnd.git
-git branch -M main
-git push -u origin main
+#CodeBook
+
+This is a group project to test our ability to implement FrontEnd, BackEnd, and also helping future coders learn best practices
+
+This will be the FrontEnd part of our project. We will be using HTML, CSS, Javascript, Bootstrap# CodeBook-FrontEnd
 
 # Getting Started with Create React App
-
-
-I have made the readme so much better, look at me go! Woo!
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
