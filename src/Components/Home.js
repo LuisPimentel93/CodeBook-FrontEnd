@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import picture from '../public/codepic.jpeg'
+import picture from './codepic.jpeg'
 
 function Home() {
   return (
