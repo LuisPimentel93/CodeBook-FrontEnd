@@ -4,23 +4,36 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import picture from './codepic.jpeg'
+// import picture from './codepic.jpeg'
+import logo from './codebookbanner.png'
+
 
 function Home() {
   return (
     <div style={{ margin: "auto" }}>
-    <h2 style={{ fontSize: "36px", lineHeight: "50px", marginTop: "20px", textAlign: "center", fontWeight: "normal" }}>CodeBook</h2>
+    
     <Container style={{ marginTop: "50px", textAlign: "center" }}>
+    <Image style={{ width: "100%",border: "1px solid #E8E9EB", marginTop: "0px", marginBottom: "5px"  }} src={logo}/>
+    {/* <Image style={{ height: "200px", width: "700px", border: "1px solid #E8E9EB", marginTop: "0px", marginBottom: "5px" }} src={picture} /> */}
     <Row style={{ borderBottom: "1px solid #E8E9EB", display: "flex", justifyContent: "space-evenly"}} />
         <Row>
             <Col xs=".5" >
-                <Image style={{ height: "200px", width: "700px", border: "1px solid #E8E9EB" }} src={picture} />
                   </Col>
-                      <Col style={{textAlign: "center"}}>
-                        <h5 style={{ fontWeight: "bold" }}></h5>
-                       <p> display our content here </p>
+                      <Col style={{border:"1px solid #E8E9EB", marginTop: "50px", marginBottom: "5px", textAlign: "center"}}>
+                        <h5 style={{ }}> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart. </h5>
                       </Col>
           </Row>
+          <Row>
+                  <Col style={{border:"1px solid #E8E9EB", marginTop: "5px", marginBottom: "5px", textAlign: "center"}}>
+                        <h5 style={{ }}> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart. </h5>
+                      </Col>
+          </Row>
+          <Row>
+                  <Col style={{border:"1px solid #E8E9EB", marginTop: "5px", marginBottom: "50px", textAlign: "center"}}>
+                        <h5 style={{ }}> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart. </h5>
+                      </Col>
+          </Row>
+          <h5> Ressources </h5>
     <CardGroup>
       <Card>
         <Card.Body>
@@ -31,7 +44,7 @@ function Home() {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Card.Link href='https://www.w3schools.com/'>W3D School </Card.Link>
+          <Card.Link href='https://www.w3schools.com/'>W3 School </Card.Link>
         </Card.Footer>
       </Card>
       <Card>
