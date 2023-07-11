@@ -30,7 +30,7 @@ function Home() {
 
           <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
           <Form style={{ width: '800px', display:"inline-block", marginTop: "20px", }}>
-            <h4 style={{color: " #564256",}} >Have some questions?</h4>
+            <h4 style={{color: " #564256",}} >Have any questions?</h4>
               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Control as="textarea" rows={6}></Form.Control>
                 <Button variant="secondary">Post</Button>
@@ -56,7 +56,7 @@ function Home() {
             </Col>
           </Row>
 
-          <h4 style={{color: " #564256", marginTop: "10px", marginBottom: "10px"}}> Ressources </h4>
+          <h4 style={{color: " #564256", marginTop: "10px", marginBottom: "10px"}}> Resources </h4>
 
           <CardGroup fluid> 
             <Card>

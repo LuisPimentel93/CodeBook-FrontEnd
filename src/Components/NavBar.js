@@ -25,7 +25,7 @@ function NavBar() {
             navbarScroll>
             <Nav.Link href="./Home">Home</Nav.Link>
             <Nav.Link href="./Profile">Profile</Nav.Link>
-            <NavDropdown title="Ressources" id="navbarScrollingDropdown">
+            <NavDropdown title="Resources" id="navbarScrollingDropdown">
               <NavDropdown.Item href="https://www.w3schools.com/">W3 School</NavDropdown.Item>
               <NavDropdown.Item href="https://developer.mozilla.org/en-US/">MozillaDev</NavDropdown.Item>
               <NavDropdown.Item href="https://stackoverflow.com/">stackoverflow</NavDropdown.Item>
