@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import logo from './codebookbanner.png'
 import picture from './codepic.jpeg'
 import Form from 'react-bootstrap/Form';
-import { Nav } from "react-bootstrap";
+import Nav from 'react-bootstrap/Nav';
 import { Navbar } from "react-bootstrap";
 
 
@@ -29,13 +29,15 @@ function Home() {
           </Col>
 
           <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
-          <Form style={{ width: '800px', display:"inline-block", marginTop: "20px", }}>
-            <h4 style={{color: " #564256",}} >Have any questions?</h4>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Control as="textarea" rows={6}></Form.Control>
-                <Button variant="secondary">Post</Button>
-              </Form.Group>
-          </Form>
+
+            <Form  >
+              <h4 style={{color: " #564256",}} >Have some questions?</h4>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Control as="textarea" rows={6} ></Form.Control>
+                  <Button variant="secondary">Post</Button>
+                </Form.Group>
+           </Form>
+
           </Col>
           <Row>
             <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
@@ -113,19 +115,13 @@ function Home() {
          <Pagination.Last /> */}
         </Pagination>
         <Row style={{ borderBottom: "1px solid #E8E9EB", display: "flex", justifyContent: "space-evenly"}} />
+        <Row>
+        {/* Do the foother here */}
+         
+        </Row>
       </Container>
-      <Navbar className="main-footer d-flex justify-content-center navbarContainer">
-        <Nav>
-          <Nav.Link href="#">About us</Nav.Link>
-          <Nav.Link href="#">Contact us</Nav.Link>
-          <Nav.Link href="#">Join us</Nav.Link>
-        </Nav>
-        <Nav className="justify-content-end">
-          <Nav.Link href="">
-            finish the footer here 
-          </Nav.Link>
-        </Nav>
-      </Navbar>
+ 
+      
 
     </div >
   );
