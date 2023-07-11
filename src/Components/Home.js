@@ -23,7 +23,7 @@ function Home() {
           
           <Col  xs lg="4" style={{ border:"1px solid #E8E9EB", borderRadius:"10px", marginRight: " 50px",marginTop: "20px"}}>
             <Image style={{ width: "425px" ,border: "1px solid #E8E9EB", marginTop: "0px", marginBottom: "5px"  }} src={picture}/>
-            <h4 style={{color: " #564256",}}>Today News</h4> 
+            <h4 style={{color: " #564256",}}>Today's News</h4> 
             <h5>* GitHub research highlights the impact of AI on developers</h5>
             <h6>To gain deeper insights into how new AI tools and existing workflows impact the overall developer experience, GitHub partnered with Wakefield Research to survey 500 developers from enterprise companies across the US.</h6>
           </Col>
