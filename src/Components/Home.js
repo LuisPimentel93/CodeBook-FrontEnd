@@ -89,7 +89,7 @@ function Home() {
               <h5 style={{ }}>Stressed? </h5>
               <Link src="https://codepen.io/jh3y/pen/LYNZwGm"></Link>
      
-            </Col>
+            </Col>s
           </Row>
 
           <Row>
