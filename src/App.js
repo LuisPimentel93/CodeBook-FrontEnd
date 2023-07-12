@@ -1,6 +1,6 @@
 import Navbar from './Components/NavBar';
-// import Home from "./Components/Home"
-import Signup from './Components/Signup';
+import Home from "./Components/Home"
+
 
 
 
@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Home /> */}
-      <Signup />
+      <Home />
     </div>
   );
 }
