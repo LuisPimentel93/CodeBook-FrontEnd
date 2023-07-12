@@ -1,3 +1,4 @@
+import React, { useReducer, useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Container from 'react-bootstrap/Container'
@@ -5,15 +6,39 @@ import Pagination from 'react-bootstrap/Pagination'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import Button from 'react-bootstrap/Button'
 import logo from './codebookbanner.png'
 import picture from './codepic.jpeg'
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import { Navbar } from "react-bootstrap";
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import { Navbar } from "react-bootstrap";
+// import Button from 'react-bootstrap/Button'
 
-
+const questionReducer = (state, event) => {
+  return {
+    ...state,
+    [event.name]: event.value
+  }
+ }
 function Home() {
+  const [questionData, setQuestionData] = useReducer( questionReducer, {});
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSubmitting(true);
+
+    // setTimeout(() => {
+    //   setSubmitting(false);
+    // }, 3000);
+
+  }
+
+  const handleChange = event => {
+    setQuestionData({
+      name: event.target.name,
+      value: event.target.value,
+    });
+  }
   return (
     <div style={{ margin: "auto" }}>
       <Container style={{ marginTop: "50px", textAlign: "center" }}>
@@ -30,14 +55,33 @@ function Home() {
 
           <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
 
-            <Form  >
+            <div className="wrapper">
+                {submitting &&
+                  <div>
+                    <ul>
+                      {Object.entries(questionData).map(([name, value]) => (
+                        <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+                          ))}
+                    </ul>
+                  </div>
+                }
+                <form onSubmit={handleSubmit}>
+                  <fieldset>
+                    <label>
+                      <h4 style={{color: " #564256",}} >Have some questions?</h4>
+                        <input name="Your Question" onChange={handleChange}/>
+                    </label>
+                  </fieldset>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            {/* <Form  >
               <h4 style={{color: " #564256",}} >Have some questions?</h4>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                   <Form.Control as="textarea" rows={6} ></Form.Control>
-                  <Button variant="secondary">Post</Button>
+                  <Button variant="secondary">name</Button>
                 </Form.Group>
-           </Form>
-
+           </Form> */}
           </Col>
           <Row>
             <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
