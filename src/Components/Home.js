@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import logo from './codebookbanner.png'
 import picture from './codepic.jpeg'
+import { Link } from '@mui/material';
 // import Form from 'react-bootstrap/Form';
 // import Nav from 'react-bootstrap/Nav';
 // import { Navbar } from "react-bootstrap";
@@ -85,7 +86,9 @@ function Home() {
           </Col>
           <Row>
             <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
-              <h5 style={{ }}> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart. </h5>
+              <h5 style={{ }}>Stressed? </h5>
+              <Link src="https://codepen.io/jh3y/pen/LYNZwGm"></Link>
+     
             </Col>
           </Row>
 
