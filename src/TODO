@@ -3,7 +3,12 @@ TODO: logo : visible on every page
 TODO: Navbar: Home botton, Sing in, search bar 
 TODO: Can search 
 TODO: Can search the profile and open them 
-TODO: It Clears the input text after the search  is completed
+TODO: It Clears the input text after the search is completed
+TODO: Link AccountPage via a button to Profile
+TODO: Add option to modify or delete informations in AccountPage
+TODO: Link search bar to customized Google Search
+TODO: Creates a box with a question, and make the questions bar
+
 
 
 
@@ -15,3 +20,10 @@ Collors being used
 Purplle: #564256
 Orange: #FC814A
 Dark blue: #2A446B
+
+
+Customized google search bar:
+
+<script async src="https://cse.google.com/cse.js?cx=f70a093eb15ab431c">
+</script>
+<div class="gcse-search"></div>

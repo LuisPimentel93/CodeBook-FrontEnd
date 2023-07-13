@@ -1,7 +1,7 @@
 
 function Search (){
     return(
-        <div> search</div>
+        <div>search</div>
     )
 }
 
