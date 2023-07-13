@@ -1,7 +1,5 @@
 import Navbar from './Components/NavBar';
 import Home from "./Components/Home";
-import SignIn from './Components/SignIn';
-
 
 
 
