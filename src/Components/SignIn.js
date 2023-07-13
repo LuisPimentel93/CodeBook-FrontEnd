@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 // import { FormGroup } from 'react-bootstrap';
 
 
-function Signin() {
+const Signin = () => {
 
     // const url = `${process.env.REACT_APP_BACKEND_URI}`
 
