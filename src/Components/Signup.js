@@ -6,7 +6,7 @@ import { FormGroup } from 'react-bootstrap';
 import { useState } from "react"
 
 
-function Signup() {
+const Signup= () => {
 
     const [profileInput, setProfileInput] = useState({
         userName:'',

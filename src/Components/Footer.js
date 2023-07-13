@@ -1,11 +1,11 @@
 import React from "react";
 
-const  Profile =  () => {
+const Footer = () => {
     return(
         <div>
-            this is a profile
+            this the footer
         </div>
     )
 }
 
-export default Profile
+export default Footer
