@@ -1,41 +1,16 @@
-import React, { useReducer, useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Cat from './githubiconjpeg.jpeg'
 import Image from 'react-bootstrap/Image'
 import logo from './codebookbanner.png'
 import picture from './codepic.jpeg'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-// const questionReducer = (state, event) => {
-//   return {
-//     ...state,
-//     [event.name]: event.value
-//   }
-//  }
 function Home() {
-  // const [questionData, setQuestionData] = useReducer( questionReducer, {});
-  // const [submitting, setSubmitting] = useState(false);
-
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   setSubmitting(true);
-
-  //   setTimeout(() => {
-  //     setSubmitting(false);
-  //   }, 3000);
-  // }
-
-  // const handleChange = event => {
-  //   setQuestionData({
-  //     name: event.target.name,
-  //     value: event.target.value,
-  //   });
-  // }
-
   return (
     <div style={{ margin: "auto" }}>
       <Container style={{ marginTop: "50px", textAlign: "center" }}>
@@ -48,12 +23,13 @@ function Home() {
             <h4 style={{color: " #564256",}}>Today's News</h4> 
             <h5>* GitHub research highlights the impact of AI on developers</h5>
           </Col>
+          {/* //form  */} 
           <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
             <Form  >
-              <h4 style={{color: " #564256",}} >Have some questions?</h4>
+              <h4 style={{color: " #564256",}} >Post your questions here!</h4>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                   <Form.Control as="textarea" rows={6} ></Form.Control>
-                  <Button variant="secondary">name</Button>
+                  <Button variant="secondary">Post</Button>
                 </Form.Group>
            </Form>
            </Col>
@@ -102,12 +78,25 @@ function Home() {
             </Card>
           </CardGroup>
         </Row>
-        <Row style={{ borderBottom: "1px solid #E8E9EB", display: "flex", justifyContent: "space-evenly"}} />
-        <Row>
-        {/* Do the foother here */}  
-        </Row>
       </Container>
+      <body>
+    <footer>
+            <div class="help-sec">
+                <div class="footer-title">Follow us!</div>
+                <ul src={Cat}>
+                  
+                    <li style={{}}>Help Me</li>
+                </ul>
+            </div>
+    </footer>
+
+</body>
+      
+      <footer style={{ marginTop: "20px", marginBottom: "5px",backgroundColor: " #564256", color:'white'}}>
+           <p > Copyright © 2023 | CodeBook</p>
+        </footer>
     </div >
+    
   );
 }
 

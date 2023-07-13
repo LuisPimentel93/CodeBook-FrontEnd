@@ -5,7 +5,6 @@ import SignIn from './Components/SignIn';
 import Forum from "./Components/Forum";
 import Profile from "./Components/Profile";
 
-
 function App() {
   return (
     <div className="App">
