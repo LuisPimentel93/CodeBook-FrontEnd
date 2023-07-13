@@ -1,5 +1,7 @@
 import Navbar from './Components/NavBar';
-import Home from "./Components/Home"
+import Home from "./Components/Home";
+import SignIn from './Components/SignIn';
+
 
 
 
@@ -9,6 +11,7 @@ function App() {
       <Navbar />
       <Home />
     </div>
+    
   );
 }
 
