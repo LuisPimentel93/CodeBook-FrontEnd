@@ -3,8 +3,8 @@ import Navbar from './Components/NavBar';
 import Home from "./Components/Home"
 import SignIn from './Components/SignIn';
 import Forum from "./Components/Forum";
-
 import Profile from "./Components/Profile";
+
 
 function App() {
   return (
