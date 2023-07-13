@@ -10,3 +10,10 @@ Collors being used
 Purplle: #564256
 Orange: #FC814A
 Dark blue: #2A446B
+
+
+Customized google search bar:
+
+<script async src="https://cse.google.com/cse.js?cx=f70a093eb15ab431c">
+</script>
+<div class="gcse-search"></div>
