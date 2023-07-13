@@ -22,7 +22,7 @@ function Home() {
             <h4 style={{color: " #564256",}}>Today's News</h4> 
             <h5>* GitHub research highlights the impact of AI on developers</h5>
           </Col>
-          {/* //form  */}
+          {/* //form  */} 
           <Col style={{border:"2px solid #E8E9EB",borderRadius:"10px", marginTop: "20px", marginBottom: "5px", justifyItems:"center"}}>
             <Form  >
               <h4 style={{color: " #564256",}} >Post your questions here!</h4>
