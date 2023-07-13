@@ -3,6 +3,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Cat from './githubiconjpeg.jpeg'
 import Image from 'react-bootstrap/Image'
 import logo from './codebookbanner.png'
 import picture from './codepic.jpeg'
@@ -77,12 +78,25 @@ function Home() {
             </Card>
           </CardGroup>
         </Row>
-        <Row style={{ borderBottom: "1px solid #E8E9EB", display: "flex", justifyContent: "space-evenly"}} />
-        <Row>
-        {/* Do the foother here */}  
-        </Row>
       </Container>
+      <body>
+    <footer>
+            <div class="help-sec">
+                <div class="footer-title">Follow us!</div>
+                <ul src={Cat}>
+                  
+                    <li style={{}}>Help Me</li>
+                </ul>
+            </div>
+    </footer>
+
+</body>
+      
+      <footer style={{ marginTop: "20px", marginBottom: "5px",backgroundColor: " #564256", color:'white'}}>
+           <p > Copyright © 2023 | CodeBook</p>
+        </footer>
     </div >
+    
   );
 }
 
