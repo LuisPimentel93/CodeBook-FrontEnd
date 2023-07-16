@@ -2,11 +2,8 @@ import React from 'react'
 
 const Forum = () => {
     return (
-        <div> this the forum </div>
+        <div> </div>
     )
-
 }
-
-
 
 export default Forum;

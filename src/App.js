@@ -5,23 +5,15 @@ import SignIn from './Components/SignIn';
 import Signup from './Components/Signup';
 import Forum from "./Components/Forum";
 import Profile from "./Components/Profile";
-// import { useState } from "react";
+import Footer from "./Components/Footer";
 
 function App() {
-  // const [profile, setProfile] = useState({
-  //   userName:'',
-  //   firstName: '',
-  //   lastName: '',
-  //   profilePicture:'',
-  //   emailAddress:'',
-  //   getsUpdates:true,
-  //   password:'',
-  // })
-
+ 
   return (
     <div className="App">
       <Router>
         <Navbar />
+    
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/forum" element={<Forum />} />
@@ -29,11 +21,13 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<Signup />} />
         </Routes>
+        <Footer/>
       </Router>
 
     </div>
 
   );
 }
+
 
 export default App;

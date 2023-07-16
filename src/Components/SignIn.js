@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { FormGroup } from 'react-bootstrap';
 // import { FormGroup } from 'react-bootstrap';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -11,8 +14,6 @@ const Signin = () => {
 
     const Navigate = useNavigate()
     const URL = `${process.env.REACT_APP_BACKEND_URI}/profile/login`
-    
-
     const [signinInput, setSigninInput] = useState({
         emailAddress:'',
         password:'',
@@ -57,16 +58,19 @@ const Signin = () => {
                         <Form.Control type="password" name="password" onChange={handleChange} placeholder="Password" />
                     </Form.Group>
                 </Row>
-                <Row className="mb-3">
-                    <p> Don't have an account <a href="/Signup">Sign Up</a></p>
-                </Row>
+                
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
-            </Form>
+                <Row className="mb-3">
+                    <p> Don't have an account yet? Fill out the form below!</p>
+                </Row>
+                </Form>
         </div>
     );
 }
 
 export default Signin
+
+
 
