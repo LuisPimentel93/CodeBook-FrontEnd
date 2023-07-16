@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { FormGroup } from 'react-bootstrap';
+// import InputGroup from 'react-bootstrap/InputGroup';
 // import { FormGroup } from 'react-bootstrap';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -52,18 +50,16 @@ const Signin = () => {
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="email" name="emailAddress" onChange={handleChange} placeholder="Enter email" />
                     </Form.Group>
-        
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name="password" onChange={handleChange} placeholder="Password" />
                     </Form.Group>
                 </Row>
-                
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
                 <Row className="mb-3">
-                    <p> Don't have an account yet? Fill out the form below!</p>
+                    <p> Don't have an account yet? </p>
                 </Row>
                 </Form>
         </div>
