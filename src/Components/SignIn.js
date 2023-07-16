@@ -35,7 +35,9 @@ const Signin = () => {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(signinInput)
         })
-        Navigate(`/profile/login`)
+        const data = await response.json()
+        console.log('checking data', data)
+        Navigate(`/profile/${data._id}`)
     }
 
     return (

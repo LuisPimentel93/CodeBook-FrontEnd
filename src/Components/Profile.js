@@ -7,8 +7,8 @@ const  Profile =  () => {
     const [profile, setProfile] = useState(undefined)
 
 
-    const { _id } = useParams()
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/profile/${_id}`
+    const { id } = useParams()
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/profile/${id}`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,7 +17,7 @@ const  Profile =  () => {
             setProfile(data)           
         }
         fetchData()
-    },[_id, URL])
+    },[id, URL])
 
     const display = profile && (
         <div>
