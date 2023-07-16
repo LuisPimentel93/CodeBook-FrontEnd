@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
-const cors = require('cors')
+
 
 // const indexRoute = require('./src/index')
 
@@ -9,8 +9,7 @@ const app = express()
 
 //middlewares
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+
 
 //routes
 // app.use('/index', indexRoute)
