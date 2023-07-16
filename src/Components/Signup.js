@@ -4,10 +4,12 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { FormGroup } from 'react-bootstrap';
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 
 const Signup= () => {
 
+    const Navigate = useNavigate()
     const [profileInput, setProfileInput] = useState({
         userName:'',
         firstName: '',
@@ -45,6 +47,7 @@ const Signup= () => {
             body: JSON.stringify(profileInput)
         })
         if (response.status !== 201) console.log('error')
+        Navigate(`/Signin`)
     }
 
     return (
