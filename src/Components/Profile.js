@@ -20,8 +20,13 @@ const  Profile =  () => {
     },[id, URL])
 
     const display = profile && (
-        <div>
+        <div style={{margin : "auto"}}>
             <h1>{profile.userName}</h1>
+            <image src={profile.profilePicture} />
+            <p>{profile.emailAddress}</p>
+            <div>
+                <h4>{profile.firstName} {profile.lastName}</h4>
+            </div>
         </div>
     )
     
