@@ -21,7 +21,7 @@ const  Profile =  () => {
 
     //deletes the current profile from database
     const handleDelete = async (e) => {
-        const response = await fetch(url, {
+        const response = await fetch(URL, {
             method: "delete"
         })
         if (response.status !== 204) console.log('error')
