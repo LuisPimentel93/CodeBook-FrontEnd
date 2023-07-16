@@ -6,67 +6,56 @@ import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { FormGroup } from 'react-bootstrap';
 // import { FormGroup } from 'react-bootstrap';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Signin = () => {
 
-    const [profileInput, setProfileInput] = useState({
-        userName:'',
-        firstName: '',
-        lastName: '',
-        profilePicture:'',
+    const Navigate = useNavigate()
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/profile/login`
+    const [signinInput, setSigninInput] = useState({
         emailAddress:'',
-        getsUpdates:true,
         password:'',
     })
 
-    //sets the url for profile creation
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/profile`
-
-    //function to handle the change in the textboxes
+    //hangles the change in text inputs
     const handleChange = (e) => {
         const value = e.target.value;
-        setProfileInput({
-            ...profileInput,
+        setSigninInput({
+            ...signinInput,
             [e.target.name]: value
         });
     }
-    //function to handle cnahge in checkbox
-    const handleUpdateCheck = (e) => {
-        const checked = e.target.checked
-        setProfileInput({
-            ...profileInput,
-            [e.target.name]: checked
-        })
-    }
-    //handles the submit to create the profile in the database
+
+    //handles the submit action
     const handleSubmit = async (e) => {
+        e.preventDefault()
         const response = await fetch(URL,{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(profileInput)
+            body: JSON.stringify(signinInput)
         })
-        if (response.status !== 201) console.log('error')
+        const data = await response.json()
+        console.log('checking data', data)
+        Navigate(`/profile/${data._id}`)
     }
-
-    // const url = `${process.env.REACT_APP_BACKEND_URI}`
-
 
     return (
         <div>
             <div>
                 <h1>Sign in</h1>
             </div>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} xs={7} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" name="emailAddress" onChange={handleChange} placeholder="Enter email" />
                     </Form.Group>
         
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" name="password" onChange={handleChange} placeholder="Password" />
                     </Form.Group>
                 </Row>
                 
@@ -77,42 +66,6 @@ const Signin = () => {
                     <p> Don't have an account yet? Fill out the form below!</p>
                 </Row>
                 </Form>
-                <Form onSubmit={handleSubmit}>
-                <Row className="mb-3">
-                    <FormGroup as={Col} xs={7} controlId="formGridName">
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control type="text" onChange={handleChange} name='userName' placeholder="username" />
-        
-                        <Form.Label>First Name</Form.Label>
-                        <Form.Control type="text" onChange={handleChange} name='firstName' placeholder="FirstName" />
-
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control type="text" onChange={handleChange} name='lastName' placeholder="LastName" />
-
-                        <Form.Label>Profile Picture URL</Form.Label>
-                        <Form.Control type="text" onChange={handleChange} name='profilePicture' placeholder="" />
-                    </FormGroup>
-                </Row>
-                <Row className="mb-3">
-                    <Form.Group as={Col} xs={7} controlId="formGridEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email"  onChange={handleChange} name='emailAddress' placeholder="Enter email" />
-                    </Form.Group>
-        
-                    <Form.Group as={Col} controlId="formGridPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" secureTextEntry={true} onChange={handleChange} name='password' placeholder="Password" />
-                    </Form.Group>
-                </Row>
-
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                    <Form.Check type="checkbox" defaultChecked={profileInput.getsUpdates} name='getsUpdates' onChange={handleUpdateCheck} label="Check to recieve updates" />
-                </Form.Group>
-        
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
         </div>
     );
 }
