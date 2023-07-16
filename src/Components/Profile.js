@@ -19,6 +19,15 @@ const  Profile =  () => {
         fetchData()
     },[id, URL])
 
+    //deletes the current profile from database
+    const handleDelete = async (e) => {
+        const response = await fetch(URL, {
+            method: "delete"
+        })
+        if (response.status !== 204) console.log('error')
+        navigate('/')
+    }
+
     const display = profile && (
         <div style={{margin : "auto"}}>
             <h1>{profile.userName}</h1>
@@ -27,6 +36,10 @@ const  Profile =  () => {
             <div>
                 <h4>{profile.firstName} {profile.lastName}</h4>
             </div>
+
+            <a href={`/Profile/update/${id}`}>Update</a>
+            <button onClick={handleDelete}>Delete</button>
+
         </div>
     )
     
