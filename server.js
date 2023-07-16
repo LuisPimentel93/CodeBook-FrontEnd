@@ -9,11 +9,10 @@ app.use(express.json())
 
 
 //routes
-// app.get('/', (req,res) => {
-//     res.send('I AM ALIVE!!!!!')
-// })
+app.get('/', (req,res) => {
+    res.send('I AM ALIVE!!!!!')
+})
 
-app.get('/')
 
 // db connection
 
