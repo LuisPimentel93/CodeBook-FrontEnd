@@ -10,7 +10,7 @@ app.use(express.json())
 
 //routes
 app.get('/', (req,res) => {
-    res.render('index')
+    res.send('index')
 })
 
 // db connection
