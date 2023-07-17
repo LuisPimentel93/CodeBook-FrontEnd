@@ -26,7 +26,7 @@ app.use('./App', appSrc)
 // db connection
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080
 
 app.listen(PORT, console.log(`listening on port ${PORT}`)) // npx nodemon index.js
 
