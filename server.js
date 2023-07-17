@@ -9,7 +9,7 @@ app.use(express.json())
 
 
 //routes
-app.use('/Home', require('./src/Components/Home'))
+app.use('/App', require('./src/App'))
 
 app.get('/', (req,res) => {
     res.send()
