@@ -8,12 +8,12 @@ const app = express()
 app.use(express.json())
 
 
-//routes
-app.use('/index', require('./src/index'))
+// //routes
+// app.use('/index', require('./src/index'))
 
-// app.get('/', (req,res) => {
-//     res.send()
-// })
+app.get('/', (req,res) => {
+    res.send('hello')
+})
 
 // db connection
 
