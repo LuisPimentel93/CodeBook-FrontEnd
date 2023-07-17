@@ -10,9 +10,8 @@ app.use(express.json())
 
 //routes
 app.get('/', (req,res) => {
-    res.send('I AM ALIVE!!!!!')
+    res.send('./Home')
 })
-
 
 // db connection
 
