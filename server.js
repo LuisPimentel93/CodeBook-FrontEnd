@@ -9,7 +9,7 @@ app.use(express.json())
 
 
 //routes
-app.use('/index', require('/src/Components/index'))
+app.use('/index', require('./src/index'))
 
 // app.get('/', (req,res) => {
 //     res.send()
