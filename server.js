@@ -10,7 +10,7 @@ app.use(express.json())
 
 
 //routes
-app.use('/index', indexSrc)
+app.use('/Home', indexSrc)
 
 // app.get('/', (req,res) => {
 //     res.render('./src/index')
