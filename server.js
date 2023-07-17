@@ -12,7 +12,7 @@ app.use(express.json())
 // app.use('/index', require('./src/index'))
 
 app.get('/', (req,res) => {
-    res.send('hello')
+    res.render('./src/index')
 })
 
 // db connection
