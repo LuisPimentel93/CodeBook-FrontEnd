@@ -9,11 +9,11 @@ app.use(express.json())
 
 
 //routes
-// app.use('/App', require('./src/App'))
+app.use('/index', require('./src/Components/index'))
 
-app.get('/', (req,res) => {
-    res.send()
-})
+// app.get('/', (req,res) => {
+//     res.send()
+// })
 
 // db connection
 
