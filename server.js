@@ -9,10 +9,10 @@ app.use(express.json())
 
 
 //routes
-// app.get('/Home', (req,res) => {
-//     res.send()
-// })
-app.use('/Home')
+app.get('/', (req,res) => {
+    res.render('Home')
+})
+
 // db connection
 
 const PORT = process.env.PORT
