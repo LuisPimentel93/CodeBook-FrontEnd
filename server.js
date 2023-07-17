@@ -9,8 +9,8 @@ app.use(express.json())
 
 
 //routes
-app.get('/', (req,res) => {
-    res.send('./Home')
+app.get('/Home', (req,res) => {
+    res.send()
 })
 
 // db connection
