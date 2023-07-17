@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const app = express()
-const indexSrc = require('./src/index')
+const indexSrc = require('./src/App')
 
 //middlewares
 app.use(express.json())
